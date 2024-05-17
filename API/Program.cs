@@ -15,7 +15,11 @@ builder.Services.AddDbContext<DataContext>(opt =>
 
 builder.Services.AddEndpointsApiExplorer();
 
+builder.Services.AddCors();
+
 var app = builder.Build();
+
+app.UseCors((builder) => builder.AllowAnyHeader().AllowAnyHeader().WithOrigins("http://localhost:4200"));
 
 app.UseHttpsRedirection();
 
