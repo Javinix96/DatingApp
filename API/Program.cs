@@ -11,6 +11,7 @@ builder.Services.AddControllers();
 builder.Services.AddAplicationServices(builder.Configuration);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddIdentityservice(builder.Configuration);
+// builder.Services.AddCors();
 
 var app = builder.Build();
 
